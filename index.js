@@ -10,13 +10,11 @@ Which scoring algorithm would you like to use?
 Enter 0, 1, or 2: `);
 const enterWordPrompt = (`\nEnter a word to be scored, or 'Stop' to quit: `);
 
-
-// Code your transform function here:
 function transform(oldObject) {
-  let newObject = {}; //creates new object to hold newPointStructure
-  for (nameOfKey in oldObject) { //loop through each key of oldObject
-    for (number in oldObject[nameOfKey]) { //loop through values of each key 
-      newObject[oldObject[nameOfKey][number]] = Number(nameOfKey); //newPointStructure[oldPointStructure[points/#][letter w/in that number]] = that same number
+  let newObject = {};
+  for (nameOfKey in oldObject) {
+    for (number in oldObject[nameOfKey]) {
+      newObject[oldObject[nameOfKey][number]] = Number(nameOfKey);
     };
   };
   return newObject;
